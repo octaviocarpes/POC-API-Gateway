@@ -11,17 +11,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
     @RestController
-    public class IlegranController
-    {
+    public class IlegranController {
         @RequestMapping(value = "/echoIlegranName/{name}")
-        public String echoIlegranName(@PathVariable(name = "name") String name)
-        {
+        public String echoIlegranName(@PathVariable(name = "name") String name){
             return "hello  <strong style=\"color: red;\">" + name + " </strong> Responsed on : " + new Date();
         }
 
         @RequestMapping(value = "/getIlegranDetails/{name}")
-        public Ilegran getIlegranDetails(@PathVariable(name = "name") String name)
-        {
+        public Ilegran getIlegranDetails(@PathVariable(name = "name") String name){
             return new Ilegran(name, "JT");
         }
 
